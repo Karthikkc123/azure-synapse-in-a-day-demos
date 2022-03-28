@@ -39,7 +39,7 @@ You will learn:
    | Auto-generate keys           | _check the box_      |
    | Connect this device to an IoT hub | _select `Enable`_             |
 
-   ![The form is configured as described.](media/iothub-devices-new-testdevice.png "Create a device")
+   ![The form is configured as described.](media/sap-ind-retail-1.png "Create a device")
 
 5. Select **Save**.
 
@@ -76,7 +76,7 @@ You will learn:
    | Auto-generate keys           | _check the box_      |
    | Connect this device to an IoT hub | _select `Enable`_             |
 
-   ![The form is configured as described.](media/iothub-devices-new-testdevice.png "Create a device")
+   ![The form is configured as described.](media/sap-ind-retail-1.png "Create a device")
 
 5. Select **Save**.
 
