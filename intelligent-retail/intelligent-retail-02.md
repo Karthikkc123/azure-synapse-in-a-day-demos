@@ -44,9 +44,9 @@ The diagram below shows the Synapse Studio elements that help us build the data 
 
     ![The cell output is displayed.](media/notebook1-cell1-output.png "Notebook 1 cell 1 output")
 
-6. Hover below the cell and select **{} Add code** to add a new cell.
+6. Hover below the cell and select **+ Code** to add a new cell.
 
-    ![The add code button is highlighted.](media/notebook-add-code.png "Add code")
+    ![The add code button is highlighted.](media/sap-ind-retail-2.png "Add code")
 
 7. Execute the following code to load the DataFrame into a temporary table:
 
@@ -185,9 +185,9 @@ Sample data (data items: `date`, `gender`, `age`, and `count`):
 
 3. Set the notebook name to **item_count** under the Properties.
 
-    ![The name value is configured.](media/item_count_notebook_name.png "Name set to item_count")
+    ![The name value is configured.](media/sap-ind-retail-3.png "Name set to item_count")
 
-4. Select **{} Add code** to add a new cell to the notebook.
+4. Select **+ Code** to add a new cell to the notebook.
 
 5. Paste the following into the cell. Replace **`YOUR_DATA_LAKE_NAME`** with the name of the primary ADLS Gen2 account for your Synapse workspace (ex. `synapselabretail` + unique id):
 
@@ -276,7 +276,7 @@ The interactive authoring capability is used during authoring for functionalitie
 
 3. Select **Enable** next to `Interactive authoring`, then **Apply**.
 
-    ![The interactive authoring option is enabled.](media/enable-interactive-authoring.png "Edit integration runtime")
+    ![The interactive authoring option is enabled.](media/sap-ind-retail-4.png "Edit integration runtime")
 
     > It takes about 1 to 2 minutes to turn on interactive authoring.
 
@@ -417,7 +417,7 @@ The interactive authoring capability is used during authoring for functionalitie
 
 3. Enter **JoinSensorFace** for the name under Properties, then select the **Properties** button to hide the pane.
 
-    ![The properties pane is displayed.](media/df-joinsensorface-name.png "JoinSensorFace property name")
+    ![The properties pane is displayed.](media/sap-ind-retail-5.png "JoinSensorFace property name")
 
 4. Select **Add Source** on the data flow canvas.
 
@@ -428,11 +428,12 @@ The interactive authoring capability is used during authoring for functionalitie
    | Field                          | Value                                              |
    | ------------------------------ | ------------------------------------------         |
    | Output stream name | _enter `sensor`_ |
-   | Source type | _select `Dataset`_ |
+   | Source type | _select `Integration dataset`_ |
+   | Dataset | _select `input_sensor`_ |
    | Options | _uncheck all_ |
    | Sampling | _select `Disable`_ |
 
-   ![The form is completed as described.](media/df-sensor-settings.png "Source settings")
+   ![The form is completed as described.](media/sap-ind-retail-6.png "Source settings")
 
 6. Turn on **Data flow debug** at the top of the data flow screen, then select **OK** in the dialog that appears.
 
@@ -469,11 +470,12 @@ The interactive authoring capability is used during authoring for functionalitie
     | Field                          | Value                                              |
     | ------------------------------ | ------------------------------------------         |
     | Output stream name | _enter `face`_ |
-    | Source type | _select `Dataset`_ |
+    | Source type | _select `Integration dataset`_ |
+    | Dataset | _select `input_face`_ |
     | Options | _uncheck all_ |
     | Sampling | _select `Disable`_ |
 
-    ![The form is completed as described.](media/df-face-settings.png "Face settings")
+    ![The form is completed as described.](media/sap-ind-retail-7.png "Face settings")
 
 10. Select the **Data preview** tab to ensure that you can see the source face data.
 
@@ -530,12 +532,12 @@ The interactive authoring capability is used during authoring for functionalitie
     | ------------------------------ | ------------------------------------------         |
     | Output stream name | _enter `OutputData`_ |
     | Incoming stream | _select `SelectColumn`_ |
-    | Sink type | _select `Dataset`_ |
+    | Sink type | _select `Integration dataset`_ |
     | Dataset | _select `output_data`_ |
     | Allow schema drift | _checked_ |
     | Validate schema | _unchecked_ |
 
-    ![The sink form is displayed.](media/df-sink.png "Sink")
+    ![The sink form is displayed.](media/sap-ind-retail-outputdata.png "Sink")
 
 19. Select the **Settings** tab. In the **Settings** form, complete the following:
 
